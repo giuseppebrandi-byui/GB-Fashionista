@@ -364,15 +364,72 @@ body {
 /**********************/
 .product-img {
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .featured-products {
   padding: 9.6rem 0;
-  background-color: red;
 }
 
 .heading {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 4rem;
+}
+
+.product-card {
+  padding: 2rem;
+  border: 1px solid #e9ecef;
+  border-radius: 2px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.product-card a {
+  text-decoration: none;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card__name {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.product-card__price {
+  font-size: 1.5rem;
+}
+
+/**********************/
+/* NEWSLETTER */
+/**********************/
+
+.newsletter {
+  background-color: grey;
+  padding: 9.6rem 0;
+}
+.newsletter-wrapper {
+  width: 40rem;
+  max-width: 40rem;
+  position: relative;
+}
+
+.wrapper input {
+  background: rgba(255, 255, 255 0.3);
+  border: 2px solid #fff;
+  border-radius: 9px;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.wrapper button {
+  background-color: #fff;
+  border-radius: 9px;
+  height: 100%;
+  aspect-ratio: 1;
+  position: absolute;
+  right: 0;
 }
