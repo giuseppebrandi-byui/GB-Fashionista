@@ -257,15 +257,27 @@ body {
   margin-right: 1.6rem !important;
 }
 
-.container {
-  max-width: 120rem;
+.container-md,
+.container-sm {
   padding: 0 3.2rem;
   margin: 0 auto;
+}
+
+.container-md {
+  max-width: 120rem;
+}
+
+.container-sm {
+  max-width: 100rem;
 }
 
 .grid {
   display: grid;
   gap: 9.6rem;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .grid--4-cols {
@@ -367,7 +379,8 @@ body {
   margin-bottom: 2rem;
 }
 
-.featured-products {
+.featured-products,
+.products-category {
   padding: 9.6rem 0;
 }
 
@@ -392,11 +405,16 @@ body {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-.card__name {
+.card__name,
+.card__category {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 2rem;
   line-height: 1.5;
+}
+
+.card__category {
+  text-align: center;
 }
 
 .product-card__price {
@@ -408,28 +426,45 @@ body {
 /**********************/
 
 .newsletter {
-  background-color: grey;
+  background-color: #170a01;
   padding: 9.6rem 0;
 }
-.newsletter-wrapper {
-  width: 40rem;
-  max-width: 40rem;
-  position: relative;
+
+.signup-details {
+  color: #fff;
+  line-height: 2;
 }
 
-.wrapper input {
-  background: rgba(255, 255, 255 0.3);
-  border: 2px solid #fff;
-  border-radius: 9px;
-  padding: 1rem 2rem;
+form {
   width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
-.wrapper button {
-  background-color: #fff;
-  border-radius: 9px;
-  height: 100%;
-  aspect-ratio: 1;
-  position: absolute;
-  right: 0;
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  width: 70%;
+}
+
+::placeholder {
+  color: #333;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.newsletterBtn {
+  padding: 1.25rem 2rem;
+  border: none;
+  margin: 0 0.5rem;
+  border-radius: 3px;
+  background-color: #f35f5f;
+  color: #fff;
+}
+
+.newsletterBtn:hover {
+  background-color: #db5656;
 }

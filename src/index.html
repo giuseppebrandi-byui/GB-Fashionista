@@ -54,7 +54,7 @@
 
       <section class="featured-products products">
         <h2 class="heading">Featured Products</h2>
-        <div class="product-list container grid grid--4-cols">
+        <div class="product-list container-md grid grid--4-cols">
           <div class="product-card">
             <a href="product_pages/marmot-ajax-3.html">
               <img
@@ -71,11 +71,13 @@
             <a href="product_pages/northface-talus-4.html">
               <img
                 class="product-img"
-                src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
                 alt="Mens Cotton Jacket"
               />
-              <h2 class="card__name">Mens Cotton Jacket</h2>
-              <p class="product-card__price">$55.99</p></a
+              <h2 class="card__name">
+                Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+              </h2>
+              <p class="product-card__price">$109.95</p></a
             >
           </div>
 
@@ -110,14 +112,58 @@
       </section>
 
       <section class="newsletter">
-        <div class="product-list container grid grid--2-cols">
-          <div>
+        <div class="product-list container-md grid grid--2-cols">
+          <div class="signup-details">
             <h2>Sign Up for newsletters</h2>
             <p>Get email updates about our latest products and offers.</p>
           </div>
-          <div class="newsletter-wrapper">
-            <input type="text" type="submit" />
-            <button>Submit</button>
+          <form action="#">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email"
+              class="form-control"
+            />
+            <button class="newsletterBtn" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="products-category products">
+        <h2 class="heading">Products Category</h2>
+        <div class="product-list container-sm grid grid--3-cols">
+          <div class="product-card">
+            <a href="#">
+              <img
+                class="product-img"
+                src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+                alt="Men's Clothing Category"
+              />
+              <h2 class="card__category">Men's Clothing</h2></a
+            >
+          </div>
+
+          <div class="product-card">
+            <a href="#">
+              <img
+                class="product-img"
+                src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
+                alt="Jewelery Category"
+              />
+              <h2 class="card__category">Jewelery</h2></a
+            >
+          </div>
+
+          <div class="product-card">
+            <a href="#">
+              <img
+                class="product-img"
+                src="https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg"
+                alt="Women's Clothing Category"
+              />
+              <h2 class="card__category">Women's Clothing</h2></a
+            >
           </div>
         </div>
       </section>

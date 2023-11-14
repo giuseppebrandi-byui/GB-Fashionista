@@ -1,3 +1,5 @@
+const baseURL = import.meta.env.VITE_SERVER_URL;
+
 function convertToJson(res) {
   if (res.ok) {
     return res.json();
@@ -6,8 +8,8 @@ function convertToJson(res) {
   }
 }
 
-export function getData(category = "tents") {
-  return fetch(`../json/${category}.json`)
+export function getData(category = "jewelery") {
+  return fetch(baseURL + `/products/category/${category}`)
     .then(convertToJson)
     .then((data) => data);
 }
