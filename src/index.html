@@ -15,11 +15,13 @@
   </head>
   <body>
     <header class="header">
-      <img
-        class="logo"
-        src="images/gb-fashionista-logo.png"
-        alt="GB Fashionista logo"
-      />
+      <a href="#">
+        <img
+          class="logo"
+          src="images/gb-fashionista-logo.png"
+          alt="GB Fashionista logo"
+        />
+      </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="#">About</a></li>
@@ -117,7 +119,7 @@
             <h2>Sign Up for newsletters</h2>
             <p>Get email updates about our latest products and offers.</p>
           </div>
-          <form action="#">
+          <form class="newsletterForm" action="#">
             <input
               type="email"
               name="email"
@@ -168,6 +170,50 @@
         </div>
       </section>
     </main>
-    <footer>&copy;NOT a real business</footer>
+    <footer class="footer">
+      <div class="container-md grid grid--4-cols">
+        <div class="logo col">
+          <a href="#" class="footer-logo">
+            <img
+              class="logo"
+              src="images/gb-fashionista-logo.png"
+              alt="GB Fashionista logo"
+            />
+          </a>
+          <p class="copyright">
+            Copyright &copy; 2023 by GB Fashionista, Inc. All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-headings">Contact us</p>
+          <address class="contacts">
+            <p>4011 W Sunset Blvd, Los Angeles, 90029</p>
+            <p>
+              <a href="tel:323-669-1601">323-669-1601</a><br /><a
+                href="mailto:info@gb-fashionista.com"
+                >info@gb-fashionista.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">About</p>
+          <ul class="footer-nav">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">My Account</p>
+          <ul class="footer-nav">
+            <li><a href="#">Register</a></li>
+            <li><a href="#">iOS app</a></li>
+            <li><a href="#">Android</a></li>
+            <!-- <li><img class="visa" src="images/visa.png" alt="" /></li> -->
+          </ul>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>
