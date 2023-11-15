@@ -596,7 +596,8 @@ footer {
   margin-bottom: 3.2rem;
 }
 
-#productName {
+.product-detail h1,
+.products h1 {
   font-size: 3rem;
   margin: 3.2rem 0;
   line-height: 1.6;
@@ -628,6 +629,14 @@ footer {
 
 #addToCart:hover {
   background-color: #db5656;
+}
+
+/**********************/
+/* CHECKOUT PAGE */
+/**********************/
+
+.products h1 {
+  text-align: center;
 }
 
 /*
