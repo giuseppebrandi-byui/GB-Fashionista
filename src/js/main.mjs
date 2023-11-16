@@ -1,12 +1,12 @@
 export function showHeroImage() {
   const randNumber = getRndInteger(1, 5);
-  const image = document.createElement("div");
-  image.innerHTML = ` <img
+  const divImage = document.createElement("div");
+  divImage.innerHTML = `<img
                         src="images/hero${randNumber}.jpg"
                         alt="Image displaying fashionable products"
                         class="hero-img"
-                      />`;
-  const heroArea = document.querySelector(".hero-img-box").append(image);
+                       />`;
+  const heroArea = document.querySelector(".hero-img-box").append(divImage);
 }
 
 function getRndInteger(min, max) {

@@ -10,7 +10,7 @@ async function convertToJson(res) {
 
 export function getData(category = "jewelery") {
   if (!baseURL.endsWith("/")) {
-    baseURL = baseURL + "/";
+    const baseURL = baseURL + "/";
   }
   return fetch(baseURL + `products/category/${category}`).then(convertToJson);
 }
