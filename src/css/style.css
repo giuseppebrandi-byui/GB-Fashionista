@@ -639,6 +639,37 @@ footer {
   text-align: center;
 }
 
+/**********************/
+/* CART PAGE */
+/**********************/
+
+.product-list a {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+.cart-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 60rem;
+  margin-bottom: 9.8rem;
+}
+
+.cart-display {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.cart-card .card__name {
+  margin-bottom: 0;
+}
+
+.cart-card img {
+  width: 5rem;
+}
+
 /*
 - Font sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
