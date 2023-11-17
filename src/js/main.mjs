@@ -1,5 +1,5 @@
 export function showHeroImage() {
-  const randNumber = getRndInteger(1, 5);
+  const randNumber = getRndInteger(1, 6);
   const divImage = document.createElement("div");
   divImage.innerHTML = `<img
                         src="images/hero${randNumber}.jpg"
