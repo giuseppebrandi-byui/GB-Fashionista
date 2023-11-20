@@ -43,7 +43,7 @@ export async function renderProductDetails(productCategory, productId) {
         <div class="product-list container-md grid grid--2-cols">
           <div class="product-card">
             <a
-              href="./index.html?category=men's%20clothing&&product=2"
+              href="./index.html?category=men&#39;s%20clothing&&product=2"
             >
               <img
                 class="product-img"
@@ -56,7 +56,7 @@ export async function renderProductDetails(productCategory, productId) {
           </div>
 
           <div class="product-card">
-            <a href="./index.html?category=men's%20clothing&&product=1">
+            <a href="./index.html?category=men&#39;s%20clothing&&product=1">
               <img
                 class="product-img"
                 src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
@@ -70,7 +70,7 @@ export async function renderProductDetails(productCategory, productId) {
           </div>
 
           <div class="product-card">
-            <a href="./index.html?category=women's%20clothing&&product=15">
+            <a href="./index.html?category=women&#39;s%20clothing&&product=15">
               <img
                 class="product-img"
                 src="https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg"
@@ -84,7 +84,7 @@ export async function renderProductDetails(productCategory, productId) {
           </div>
 
           <div class="product-card">
-            <a href="./index.html?category=women's%20clothing&&product=18">
+            <a href="./index.html?category=women&#39;s%20clothing&&product=18">
               <img
                 class="product-img"
                 src="https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
