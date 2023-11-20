@@ -8,7 +8,7 @@ function renderCartContents() {
 
 function cartItemTemplate(item) {
   const newItem = `<li class="cart-card">
-  <a href="product_pages/index.html?category=${item.category}&&product=${item.id}" class="cart-card__image">
+  <a href="/product_pages/index.html?category=${item.category}&&product=${item.id}" class="cart-card__image">
     <img
       src="${item.image}"
       alt="${item.title}"
