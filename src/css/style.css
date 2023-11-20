@@ -282,7 +282,7 @@ body {
 
 .grid {
   display: grid;
-  gap: 9.6rem;
+  gap: 8rem;
 }
 
 .grid--2-cols {
