@@ -23,13 +23,13 @@ export async function renderProductDetails(productCategory, productId) {
     for (let i = 0; i < Number.parseInt(arrayRating[0]); i++) {
       document.querySelector(
         ".star-rating"
-      ).innerHTML += `<ion-icon name="star"></ion-icon>`;
+      ).innerHTML += `<ion-icon class="star-icon" name="star"></ion-icon>`;
     }
     console.log(Number.parseInt(arrayRating[1]));
     if (Number.parseInt(arrayRating[1]) > 4)
       document.querySelector(
         ".star-rating"
-      ).innerHTML += `<ion-icon name="star-half"></ion-icon>`;
+      ).innerHTML += `<ion-icon class="star-icon" name="star-half"></ion-icon>`;
     document.querySelector(
       ".star-rating"
     ).innerHTML += `  (${selectedProduct.rating.count})`;
