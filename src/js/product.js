@@ -6,13 +6,25 @@ const productId = getParam("product");
 const productCategory = getParam("category");
 
 function addProductToCart(product) {
-  console.log(product);
   let cart = getLocalStorage("so-cart");
   cart = cart ?? [];
-  console.log("cart: ", cart);
-  cart.push(product);
+  let duplicate = false;
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].id === product.id) {
+      // if the product id matches the additional added product change the
+      // boolean value to true
+      duplicate = true;
+      // if the product added already exists increment the quantity by 1
+      cart[i] = { ...cart[i], productOnHold: cart[i].productOnHold + 1 };
+    }
+  }
+  if (!duplicate) {
+    // if product is not already in the cart then add the object plus a key value
+    // pair holding the number of the duplicate products in the cart.
+    cart.push({ ...product, productOnHold: 1 });
+  }
+
   setLocalStorage("so-cart", cart);
-  console.log("cart: ", getLocalStorage("so-cart"));
 }
 // add to cart button event handler
 async function addToCartHandler(e) {
