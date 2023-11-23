@@ -4,7 +4,7 @@ import { renderListWithTemplate } from "./utils.mjs";
 let products;
 
 function productCardTemplate(product) {
-  return `<li class="product-card">
+  return `<div class="product-card">
             <a
               href="/product_pages/index.html?category=${product.category}&&product=${product.id}"
             >
@@ -16,7 +16,7 @@ function productCardTemplate(product) {
               <h2 class="card__name">${product.title}</h2>
               <p class="product-card__price">$${product.price}</p></a
             >
-          </li>`;
+          </div>`;
 }
 
 export async function displayElementsBySearchTerm() {
@@ -48,10 +48,10 @@ export function filterProducts() {
     }
   };
 
-  const productListModal = document.querySelector(".product-list-header");
+  const productListModal = document.querySelector(".product-list");
   renderListWithTemplate(productCardTemplate, productListModal, products);
 
-  const productList = document.querySelector(".product-list-header");
+  const productList = document.querySelector(".product-list");
   let filterValue = filterInput.value.toUpperCase();
   let item = productList.querySelectorAll(".product-card");
   for (let i = 0; i < item.length; i++) {
