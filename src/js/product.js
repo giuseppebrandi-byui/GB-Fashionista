@@ -30,7 +30,7 @@ function addProductToCart(product) {
   setLocalStorage("so-cart", cart);
 }
 // add to cart button event handler
-async function addToCartHandler(e) {
+async function addToCartHandler() {
   const product = await findProductById(productCategory, productId);
   addProductToCart(product);
 }
