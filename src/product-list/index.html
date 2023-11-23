@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/product-list.js" type="module"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
@@ -19,24 +20,21 @@
       nomodule=""
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="../js/app.js" type="module"></script>
-    <script src="../js/cart.js" type="module"></script>
-    <title>GB Fashionista | Cart Page</title>
+    <title>GB Fashionista | Product List</title>
   </head>
-
   <body>
     <header class="header"></header>
 
     <main>
-      <section class="products">
-        <h1>My Cart</h1>
-
-        <ul class="product-list cart-display">
-          <!-- Products added to cart -->
-        </ul>
+      <section class="featured-products products">
+        <h2 class="heading dynamic-category-heading">Our Products</h2>
+        <div
+          class="product-list product-fullList container-md grid grid--4-cols"
+        >
+          <!-- Product list goes here -->
+        </div>
       </section>
     </main>
-
     <footer class="footer"></footer>
   </body>
 </html>

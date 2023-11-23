@@ -25,7 +25,7 @@ export async function renderProductDetails(productCategory, productId) {
         ".star-rating"
       ).innerHTML += `<ion-icon class="star-icon" name="star"></ion-icon>`;
     }
-    console.log(Number.parseInt(arrayRating[1]));
+
     if (Number.parseInt(arrayRating[1]) > 4)
       document.querySelector(
         ".star-rating"
@@ -34,7 +34,6 @@ export async function renderProductDetails(productCategory, productId) {
       ".star-rating"
     ).innerHTML += `  (${selectedProduct.rating.count})`;
   } catch (e) {
-    console.log("Error: " + e.message);
     document.querySelector(
       ".product-detail"
     ).innerHTML = `<class="featured-products products">

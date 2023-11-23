@@ -8,7 +8,7 @@ async function convertToJson(res) {
   }
 }
 
-export function getData(category = "jewelery") {
+export function getProductByCategory(category = "jewelery") {
   if (!baseURL.endsWith("/")) {
     const baseURL = baseURL + "/";
   }
@@ -16,7 +16,7 @@ export function getData(category = "jewelery") {
 }
 
 export async function findProductById(category, id) {
-  const products = await getData(category);
+  const products = await getProductByCategory(category);
   return products.find(
     (item) => Number.parseInt(item.id) === Number.parseInt(id)
   );
