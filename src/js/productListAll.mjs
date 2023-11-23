@@ -1,5 +1,7 @@
 import { getProductByCategory } from "./productData.mjs";
-import { renderListWithTemplate } from "./utils.mjs";
+import { renderWithTemplate } from "./utils.mjs";
+
+let products;
 
 function productCardTemplate(product) {
   return `<div class="product-card">
@@ -17,11 +19,14 @@ function productCardTemplate(product) {
           </div>`;
 }
 
-export default async function product_list(selector, category) {
-  // get the element we will insert the list into from the selector
-  const el = document.querySelector(selector);
-  // get the list of products
-  const products = await getProductByCategory(category);
-  // render out the product list to the element
-  renderListWithTemplate(productCardTemplate, el, products);
+export default async function getAllProducts() {
+  const menClothing = await getProductByCategory("men's clothing");
+  const jewelery = await getProductByCategory("jewelery");
+  const womenClothing = await getProductByCategory("women's clothing");
+
+  products = menClothing.concat(jewelery, womenClothing);
+  console.log("Full list: ", products);
 }
+
+const el = document.querySelector(".product-fullList");
+renderWithTemplate(productCardTemplate, el, products);
