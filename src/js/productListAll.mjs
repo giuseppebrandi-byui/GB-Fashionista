@@ -1,12 +1,12 @@
 import { getProductByCategory } from "./productData.mjs";
-import { renderWithTemplate } from "./utils.mjs";
+import { renderListWithTemplate } from "./utils.mjs";
 
 let products;
 
 export function productCardTemplate(product) {
   return `<div class="product-card">
             <a
-              href="product_pages/index.html?category=${product.category}&&product=${product.id}"
+              href="/product_pages/index.html?category=${product.category}&&product=${product.id}"
             >
               <img
                 class="product-img"
@@ -26,7 +26,6 @@ export default async function getAllProducts() {
 
   products = menClothing.concat(jewelery, womenClothing);
   console.log("Full list: ", products);
+  const el = document.querySelector(".product-fullList");
+  renderListWithTemplate(productCardTemplate, el, products);
 }
-
-const el = document.querySelector(".product-fullList");
-renderWithTemplate(productCardTemplate, el, products);
