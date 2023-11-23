@@ -32,7 +32,6 @@ export function renderListWithTemplate(
   if (clear && parentElement !== null) {
     parentElement.innerHTML = "";
   }
-  console.log("This is a great list: ", list);
   const htmlString = list.map(templateFn);
 
   if (parentElement !== null) {

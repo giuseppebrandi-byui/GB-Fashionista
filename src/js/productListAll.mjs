@@ -25,7 +25,6 @@ export default async function getAllProducts() {
   const womenClothing = await getProductByCategory("women's clothing");
 
   products = menClothing.concat(jewelery, womenClothing);
-  console.log("Full list: ", products);
   const el = document.querySelector(".product-fullList");
   renderListWithTemplate(productCardTemplate, el, products);
 }
