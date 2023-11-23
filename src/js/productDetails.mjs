@@ -32,7 +32,7 @@ export async function renderProductDetails(productCategory, productId) {
       ).innerHTML += `<ion-icon class="star-icon" name="star-half"></ion-icon>`;
     document.querySelector(
       ".star-rating"
-    ).innerHTML += `  (${selectedProduct.rating.count})`;
+    ).innerHTML += `  <span class="num-ratings">(${selectedProduct.rating.count})</span>`;
   } catch (e) {
     document.querySelector(
       ".product-detail"

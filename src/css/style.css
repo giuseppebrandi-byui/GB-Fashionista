@@ -437,6 +437,11 @@ footer {
   margin-bottom: 4.8rem;
 }
 
+.num-ratings {
+  font-size: 2rem;
+  vertical-align: top;
+}
+
 /**********************/
 /* CHECKOUT PAGE */
 /**********************/
