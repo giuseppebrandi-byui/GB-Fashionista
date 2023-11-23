@@ -678,6 +678,25 @@ footer {
   width: 5rem;
 }
 
+/**********************/
+/* SEARCH FIELD */
+/**********************/
+
+#form form {
+  margin-top: 0.65rem;
+  max-width: 300px;
+  height: 40px;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+form input {
+  padding: 1rem 1rem;
+}
+
 /*
 - Font sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
