@@ -28,14 +28,6 @@
     <header class="header"></header>
 
     <main>
-      <section class="products">
-        <h1>My Cart</h1>
-
-        <ul class="product-list cart-display">
-          <!-- Products added to cart -->
-        </ul>
-      </section>
-
       <section id="cart" class="products container-md">
         <h1>My Cart</h1>
         <table width="100%">
@@ -49,22 +41,8 @@
               <td>Subtotal</td>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>
-                <a href="#"><ion-icon name="trash-outline"></ion-icon></a>
-              </td>
-              <td>
-                <img
-                  src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-                  alt="men's clothing"
-                />
-              </td>
-              <td>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</td>
-              <td>$118.19</td>
-              <td><input type="number" value="1" /></td>
-              <td>$118.19</td>
-            </tr>
+          <tbody class="product-list cart-display">
+            <!-- Added products  -->
           </tbody>
         </table>
       </section>

@@ -451,37 +451,6 @@ footer {
 }
 
 /**********************/
-/* CART PAGE */
-/**********************/
-
-.product-list a {
-  text-decoration: none;
-  color: var(--dark-grey);
-}
-
-.cart-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-  width: 60rem;
-  margin-bottom: 9.8rem;
-}
-
-.cart-display {
-  max-width: 60rem;
-  margin: 0 auto;
-}
-
-.cart-card .card__name {
-  margin-bottom: 0;
-}
-
-.cart-card img {
-  width: 5rem;
-}
-
-/**********************/
 /* SEARCH FIELD */
 /**********************/
 
@@ -546,7 +515,19 @@ form input {
   cursor: pointer;
 }
 
-/* CART PAGE TESTING */
+/**********************/
+/* CART PAGE */
+/**********************/
+
+.product-list a {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+#cart {
+  padding: 5.4rem 0 9.6rem 0;
+}
+
 #cart table {
   width: 100%;
   border-collapse: collapse;
@@ -564,25 +545,50 @@ form input {
 }
 
 #cart table td:nth-child(2) {
-  width: 15rem;
+  width: 10rem;
   text-align: center;
 }
 
 #cart table td:nth-child(3) {
-  width: 25rem;
+  width: 40rem;
   text-align: center;
 }
 
 #cart table td:nth-child(4),
 #cart table td:nth-child(5),
 #cart table td:nth-child(6) {
-  width: 15rem;
+  width: 10rem;
   text-align: center;
 }
 
 #cart table td:nth-child(5) input {
   width: 7rem;
   padding: 1rem 0.5rem 1rem 1.5rem;
+}
+
+#cart table thead {
+  border: 1px solid #2e2901;
+  border-left: none;
+  border-right: none;
+}
+
+#cart table thead td {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding: 1.8rem 0;
+}
+
+#cart table tbody tr td {
+  padding-top: 1.5rem;
+}
+
+#cart table tbody td {
+  font-size: 1.4rem;
+}
+
+.remove-product {
+  font-size: 2rem;
 }
 
 /*
