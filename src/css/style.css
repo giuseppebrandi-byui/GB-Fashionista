@@ -546,6 +546,45 @@ form input {
   cursor: pointer;
 }
 
+/* CART PAGE TESTING */
+#cart table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+#cart table img {
+  width: 5rem;
+}
+
+#cart table td:nth-child(1) {
+  width: 10rem;
+  text-align: center;
+}
+
+#cart table td:nth-child(2) {
+  width: 15rem;
+  text-align: center;
+}
+
+#cart table td:nth-child(3) {
+  width: 25rem;
+  text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+  width: 15rem;
+  text-align: center;
+}
+
+#cart table td:nth-child(5) input {
+  width: 7rem;
+  padding: 1rem 0.5rem 1rem 1.5rem;
+}
+
 /*
 - Font sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
