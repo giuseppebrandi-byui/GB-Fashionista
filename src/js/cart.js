@@ -44,6 +44,7 @@ function deleteCartObject(e) {
   document
     .getElementById(e.currentTarget.id)
     .parentElement.parentElement.remove();
+  document.location.reload();
 }
 
 function cartItemTemplate(item) {
@@ -80,5 +81,25 @@ function cartItemTemplate(item) {
 
   return newItems;
 }
+
+function cartTotal() {
+  let cart = getLocalStorage("so-cart");
+  // Set the cart total to zero
+  let totalCart = 0;
+
+  if (cart != null) {
+    cart.forEach((item) => {
+      totalCart += item.price * item.productOnHold;
+      return totalCart;
+    });
+  }
+  // Display the subtotal to the cart subtotal section
+  document.querySelector(".cart-subtotal").innerHTML = `$${totalCart.toFixed(
+    2
+  )}`;
+  // Display the total to the cart total section
+  document.querySelector(".cart-total").innerHTML = `$${totalCart.toFixed(2)}`;
+}
+cartTotal();
 
 renderCartContents();
