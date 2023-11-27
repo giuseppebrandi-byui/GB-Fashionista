@@ -28,6 +28,7 @@ function updateObjectQuantity(e) {
     }
   }
   setLocalStorage("so-cart", cartItems);
+  document.location.reload();
 }
 
 function deleteCartObject(e) {

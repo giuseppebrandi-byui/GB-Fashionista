@@ -614,6 +614,7 @@ form input {
 
 .remove-product {
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .coupon-section {
