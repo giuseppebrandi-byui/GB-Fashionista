@@ -331,8 +331,12 @@ footer {
 
 .social-icon,
 .cart-icon {
-  height: 2.4rem;
-  width: 2.4rem;
+  height: 2.8rem;
+  width: 2.8rem;
+}
+
+.cart-icon {
+  position: relative;
 }
 
 .copyright {
@@ -518,6 +522,20 @@ form input {
 /**********************/
 /* CART PAGE */
 /**********************/
+
+.items-indicator {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #f35f5f;
+  border-radius: 50%;
+  position: absolute;
+  top: 3.7rem;
+  right: 4.5rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+  display: none;
+}
 
 .product-list a {
   text-decoration: none;

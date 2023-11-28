@@ -12,6 +12,7 @@ export function getLocalStorage(key) {
 // save data to local storage
 export function setLocalStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
+  document.location.reload();
 }
 // set a listener for both touchend and click
 export function setClick(selector, callback) {
@@ -66,6 +67,23 @@ export async function renderWithTemplate(
   }
 }
 
+function displayCartIndicator() {
+  let cart = getLocalStorage("so-cart");
+  let cartCounter = 0;
+  console.log("Cart Counter: " + cartCounter);
+
+  if (cart != null) {
+    cart.forEach((item) => {
+      cartCounter += item.productOnHold;
+    });
+  }
+
+  if (cartCounter > 0) {
+    document.querySelector(".items-indicator").textContent = cartCounter;
+    document.querySelector(".items-indicator").style.display = "block";
+  }
+}
+
 async function loadTemplate(path) {
   return async function () {
     const res = await fetch(path);
@@ -83,4 +101,5 @@ export async function loadHeaderFooter() {
   const footerEl = document.querySelector(".footer");
   await renderWithTemplate(headerTemplateFn, headerEl);
   await renderWithTemplate(footerTemplateFn, footerEl);
+  displayCartIndicator();
 }
