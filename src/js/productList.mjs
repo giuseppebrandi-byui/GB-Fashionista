@@ -21,7 +21,6 @@ function productCardTemplate(product) {
 export default async function product_list(selector, category = "all") {
   // get the element we will insert the list into from the selector
   const el = document.querySelector(selector);
-  console.log("This is category: ", category);
   if (category == "all" || category == "null" || category == undefined) {
     const menClothing = await getProductByCategory("men's clothing");
     const jewelery = await getProductByCategory("jewelery");

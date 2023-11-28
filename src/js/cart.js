@@ -4,12 +4,13 @@ function renderCartContents() {
   const cartItems = getLocalStorage("so-cart");
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
+
   const removeBtn = document.querySelectorAll(".remove-product");
   for (let i = 0; i < removeBtn.length; i++) {
     removeBtn[i].addEventListener("click", deleteCartObject);
   }
+
   const cartQuantity = document.querySelectorAll(".cartQuantity");
-  // console.log("Cart Quantity:", cartQuantity);
   for (let i = 0; i < cartQuantity.length; i++) {
     cartQuantity[i].addEventListener("change", updateObjectQuantity);
   }
@@ -24,11 +25,10 @@ function updateObjectQuantity(e) {
       Number.parseInt(e.currentTarget.getAttribute("productid"))
     ) {
       cartItems[i].productOnHold = Number.parseInt(e.currentTarget.value);
-      // console.log(cartItems[i].productOnHold);
     }
   }
   setLocalStorage("so-cart", cartItems);
-  document.location.reload();
+  // document.location.reload();
 }
 
 function deleteCartObject(e) {
@@ -41,10 +41,10 @@ function deleteCartObject(e) {
     }
   }
   setLocalStorage("so-cart", cartItems);
-  document
-    .getElementById(e.currentTarget.id)
-    .parentElement.parentElement.remove();
-  document.location.reload();
+  // document
+  //   .getElementById(e.currentTarget.id)
+  //   .parentElement.parentElement.remove();
+  // document.location.reload();
 }
 
 function cartItemTemplate(item) {
@@ -82,7 +82,7 @@ function cartItemTemplate(item) {
   return newItems;
 }
 
-function cartTotal() {
+function computeCartTotal() {
   let cart = getLocalStorage("so-cart");
   // Set the cart total to zero
   let totalCart = 0;
@@ -100,6 +100,6 @@ function cartTotal() {
   // Display the total to the cart total section
   document.querySelector(".cart-total").innerHTML = `$${totalCart.toFixed(2)}`;
 }
-cartTotal();
 
 renderCartContents();
+computeCartTotal();
