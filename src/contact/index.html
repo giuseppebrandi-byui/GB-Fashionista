@@ -51,6 +51,70 @@
           </div>
         </div>
       </section>
+
+      <section>
+        <div class="container-md grid grid--2-cols">
+          <form method="get" action="thanks.html" class="form-inquiry">
+            <fieldset>
+              <legend><h2>My Inquiry</h2></legend>
+              <label class="top"
+                >First Name* <input type="text" name="fname" required
+              /></label>
+              <label class="top"
+                >Last Name* <input type="text" name="lname" required
+              /></label>
+              <label class="top"
+                >Phone <input type="tel" name="phone" placeholder="12345551234"
+              /></label>
+              <label class="top"
+                >Email*
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="someone@gmail.com"
+                  required
+              /></label>
+              <label class="top"
+                >Message
+                <textarea
+                  rows="4"
+                  cols="50"
+                  name="user-message"
+                  placeholder="Your Message ..."
+                  id="user-message"
+                ></textarea>
+              </label>
+              <input
+                type="hidden"
+                id="date-time"
+                name="date-time"
+                value="currentDateTime"
+              />
+            </fieldset>
+
+            <input
+              type="submit"
+              value="Send my inquiry"
+              class="btn btn--full submitBtn"
+            />
+          </form>
+
+          <div class="info-text-box">
+            <h2>How to find us</h2>
+            <p class="info-text">GB Fashionista</p>
+            <p class="info-text">4011 W Sunset Blvd, Los Angeles, 90029</p>
+            <p class="info-text">323-669-1601</p>
+            <p class="info-text">Monday – Saturday: 8:00 AM to 6:00 PM</p>
+            <a href="https://maps.app.goo.gl/QBJUCDrv3rKqBzPc6" target="_blank"
+              ><picture>
+                <img
+                  src="../images/map.jpg"
+                  alt="map of GB Fashionista"
+                  class="img-map" /></picture
+            ></a>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer"></footer>
   </body>
