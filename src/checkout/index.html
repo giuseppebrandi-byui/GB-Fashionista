@@ -28,8 +28,87 @@
     <header class="header"></header>
 
     <main>
-      <section class="products">
+      <section class="products container-sm">
         <h1>Review & Place your Order</h1>
+        <form
+          method="get"
+          action="/checkout/index.html"
+          name="checkout"
+          class="form-checkout"
+        >
+          <fieldset>
+            <legend><h2>Checkout</h2></legend>
+            <label class="top"
+              >First Name* <input type="text" id="fname" name="fname" required
+            /></label>
+            <label class="top"
+              >Last Name* <input type="text" id="lname" name="lname" required
+            /></label>
+            <label class="top"
+              >Street* <input type="text" id="street" name="street" required
+            /></label>
+
+            <label class="top"
+              >City* <input type="text" id="city" name="city" required
+            /></label>
+
+            <label class="top"
+              >State* <input type="text" id="state" name="state" required
+            /></label>
+            <label class="top"
+              >Zip* <input type="text" id="zip" name="zip" required
+            /></label>
+
+            <input
+              type="hidden"
+              id="date-time"
+              name="date-time"
+              value="currentDateTime"
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend><h2>Payment</h2></legend>
+            <label class="top"
+              >Card Number*<input
+                type="text"
+                id="ccnum"
+                name="cardNumber"
+                placeholder="1111-2222-3333-4444"
+                required
+            /></label>
+            <label class="top"
+              >Expiration*<input
+                type="text"
+                id="exp-date"
+                name="expiration"
+                placeholder="MM/YY"
+                required
+            /></label>
+            <label class="top"
+              >CVV*<input
+                type="password"
+                id="cvv"
+                name="cvv"
+                placeholder="352"
+                required
+            /></label>
+          </fieldset>
+
+          <fieldset>
+            <legend><h2>Order Summary</h2></legend>
+            <div class="sub-total">
+              <p class="info-text">Subtotal</p>
+              <p class="info-text">$200</p>
+            </div>
+            <div class="total">
+              <p class="info-text">Total</p>
+              <p class="info-text">$200</p>
+            </div>
+          </fieldset>
+
+          <input type="submit" value="Checkout" class="submitBtn" />
+        </form>
       </section>
     </main>
 
