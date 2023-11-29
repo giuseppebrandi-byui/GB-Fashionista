@@ -70,7 +70,6 @@ export async function renderWithTemplate(
 function displayCartIndicator() {
   let cart = getLocalStorage("so-cart");
   let cartCounter = 0;
-  console.log("Cart Counter: " + cartCounter);
 
   if (cart != null) {
     cart.forEach((item) => {

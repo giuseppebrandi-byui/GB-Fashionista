@@ -3,13 +3,11 @@ import { findProductById } from "./productData.mjs";
 export async function renderProductDetails(productCategory, productId) {
   try {
     const selectedProduct = await findProductById(productCategory, productId);
-    console.log(selectedProduct);
     document.querySelector("#productName").innerText = selectedProduct.title;
     document.querySelector("#productImage").src = selectedProduct.image;
     document.querySelector("#productImage").alt = selectedProduct.title;
 
     let decimalDigits = selectedProduct.price.toString().split(".")[1];
-    console.log(decimalDigits);
     if (decimalDigits && decimalDigits.length < 2) {
       selectedProduct.price = selectedProduct.price.toString() + "0";
     }
@@ -36,7 +34,6 @@ export async function renderProductDetails(productCategory, productId) {
       ".star-rating"
     ).innerHTML += `  <span class="num-ratings">(${selectedProduct.rating.count})</span>`;
   } catch (e) {
-    console.log(e);
     document.querySelector(
       ".product-detail"
     ).innerHTML = `<class="featured-products products">

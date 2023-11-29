@@ -17,9 +17,7 @@ export function getProductByCategory(category = "jewelery") {
 
 export async function findProductById(category, id) {
   const products = await getProductByCategory(category);
-  console.log(id);
   return products.find((item) => {
-    console.log(Number.parseInt(item.id) === Number.parseInt(id));
     return Number.parseInt(item.id) === Number.parseInt(id);
   });
 }
