@@ -1,6 +1,6 @@
 import { getLocalStorage } from "./utils.mjs";
 
-export function computeCartTotal() {
+export function displayOrderSummary() {
   let cart = getLocalStorage("so-cart");
   // Set sales tax to 6%
   const tax = 6;
@@ -28,4 +28,4 @@ export function computeCartTotal() {
   document.querySelector("#cart-total").innerHTML = `$${totalCart.toFixed(2)}`;
 }
 
-computeCartTotal();
+displayOrderSummary();
