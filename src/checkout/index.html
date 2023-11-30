@@ -20,6 +20,7 @@
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
     <script src="../js/app.js" type="module"></script>
+    <script src="../js/cart.js" type="module"></script>
     <script src="../js/checkout.js" type="module"></script>
     <title>GB Fashionista | Checkout Page</title>
   </head>
@@ -95,15 +96,23 @@
             /></label>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="checkout-summary">
             <legend><h2>Order Summary</h2></legend>
-            <div class="sub-total">
+            <div class="checkout-subtotal">
               <p class="info-text">Subtotal</p>
-              <p class="info-text">$200</p>
+              <p id="cart-subtotal" class="info-text">$0.00</p>
             </div>
-            <div class="total">
+            <div class="checkout-shipping">
+              <p class="info-text">Shipping</p>
+              <p class="info-text">Free</p>
+            </div>
+            <div class="checkout-tax">
+              <p class="info-text">Sales Tax</p>
+              <p id="sales-tax" class="info-text">$0.00</p>
+            </div>
+            <div class="checkout-total">
               <p class="info-text">Total</p>
-              <p class="info-text">$200</p>
+              <p id="cart-total" class="info-text">$0.00</p>
             </div>
           </fieldset>
 
