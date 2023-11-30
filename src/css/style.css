@@ -301,6 +301,10 @@ body {
   font-size: 1.6rem;
 }
 
+.newsletter-thanks {
+  font-size: 2rem;
+}
+
 /**********************/
 /* FOOTER */
 /**********************/
@@ -493,18 +497,27 @@ form input {
 
 /* Modal Content/Box */
 .modal-content,
-.modalContentReview {
+.modalContentReview,
+.modal-content-newsletter {
   background-color: #fefefe;
   padding: 10px;
   border: 1px solid #888;
 }
 
+.modal-content-newsletter {
+  margin: 26.5% auto;
+  width: 25%;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
 .modal-content {
-  margin: 5% auto; /* 15% from the top and centered */
+  margin: 5% auto; /* 5% from the top and centered */
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
-.close {
+.close,
+.closeModalNewsletterBtn {
   color: #aaa;
   text-align: right;
   font-size: 28px;
