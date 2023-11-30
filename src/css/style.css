@@ -798,18 +798,22 @@ form label.top input:required:valid {
 /* CHECKOUT PAGE */
 /**********************/
 
-.sub-total {
+.checkout-subtotal {
   margin-top: 2rem;
 }
 
-.sub-total,
-.total {
+.checkout-subtotal,
+.checkout-total,
+.checkout-shipping,
+.checkout-tax {
   display: flex;
   justify-content: space-between;
 }
 
-.sub-total p,
-.total p {
+.checkout-subtotal p,
+.checkout-total p,
+.checkout-shipping,
+.checkout-tax {
   font-size: 1.8rem;
 }
 
