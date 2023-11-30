@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
     <script src="/js/main.js" type="module"></script>
+    <script src="/js/newsletter.js" type="module"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
@@ -109,13 +110,24 @@
         </div>
       </section>
 
+      <!-- The Modal -->
+      <div id="newsLetterModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content-newsletter">
+          <span class="close">&times;</span>
+          <p class="newsletter-thanks">
+            Thank you for subscribing to our newsletter.
+          </p>
+        </div>
+      </div>
+
       <section class="newsletter">
         <div class="product-list container-md grid grid--2-cols">
           <div class="signup-details">
             <h2>Sign Up for newsletters</h2>
             <p>Get email updates about our latest products and offers.</p>
           </div>
-          <form class="newsletterForm" action="#">
+          <form class="newsletterForm">
             <input
               type="email"
               name="email"
