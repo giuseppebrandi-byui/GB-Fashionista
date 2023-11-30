@@ -709,7 +709,8 @@ form input {
   width: 100%;
 }
 
-form.form-inquiry {
+form.form-inquiry,
+form.form-checkout {
   margin-bottom: 9.6rem;
 }
 
@@ -792,6 +793,30 @@ form label.top input:required:valid {
 .thankyou-message {
   text-align: center;
 }
+
+/**********************/
+/* CHECKOUT PAGE */
+/**********************/
+
+.checkout-subtotal {
+  margin-top: 2rem;
+}
+
+.checkout-subtotal,
+.checkout-total,
+.checkout-shipping,
+.checkout-tax {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-subtotal p,
+.checkout-total p,
+.checkout-shipping,
+.checkout-tax {
+  font-size: 1.8rem;
+}
+
 /*
 - Font sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
