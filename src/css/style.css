@@ -506,7 +506,7 @@ form input {
 
 .modal-content-newsletter {
   margin: 26.5% auto;
-  width: 25%;
+  width: 40%;
   text-align: center;
   padding-bottom: 4rem;
 }
@@ -838,3 +838,113 @@ form label.top input:required:valid {
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
+
+/* Modal */
+.wrapper-register {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 420px;
+  height: 50%;
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px 30px 70px;
+  background: lightblue;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.wrapper-register.active .form-register.register {
+  bottom: 0%;
+  border-radius: 16%;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-register header,
+.freebie header {
+  font-size: 30px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.wrapper-register.active .form-register.register header {
+  opacity: 1;
+}
+
+.wrapper-register.active .freebie header {
+  opacity: 0;
+}
+
+.wrapper-register form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reg-form input {
+  height: 60px;
+  outline: none;
+  border: none;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.registerBtn {
+  margin-top: 15px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: none;
+  font-size: var(--large-font);
+  cursor: pointer;
+}
+
+.form-register.register {
+  position: absolute;
+  left: 50%;
+  bottom: -100%;
+  transform: translateX(-50%);
+  width: calc(100% + 220px);
+  padding: 20px 140px;
+  border-radius: 50%;
+  height: 100%;
+  background: #fff;
+  transition: all 0.6s ease;
+}
+
+.form-register.register input {
+  border: 1px solid #aaa;
+}
+
+.form-register.register input:focus {
+  box-shadow: 0 1px 0 #ddd;
+}
+
+.form-register.register header {
+  color: #333;
+  opacity: 0.6;
+}
+
+.header-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ModalCloseBtn,
+.registerCloseBtn {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.free-pass {
+  font-size: 2rem;
+  text-align: center;
+}
