@@ -851,9 +851,9 @@ form label.top input:required:valid {
   max-width: 420px;
   height: 50%;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 2px;
   padding: 20px 30px 70px;
-  background: lightblue;
+  background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   overflow: hidden;
@@ -901,13 +901,18 @@ form label.top input:required:valid {
   background: #fff;
 }
 
-.registerBtn {
+input.registerBtn {
   margin-top: 15px;
-  background-color: var(--secondary-color);
+  background-color: #f35f5f;
   color: #fff;
   padding: none;
-  font-size: var(--large-font);
+  font-size: 2rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input.registerBtn:hover {
+  background-color: #db5656;
 }
 
 .form-register.register {
@@ -941,7 +946,15 @@ form label.top input:required:valid {
   justify-content: space-between;
 }
 
-.free-pass {
-  font-size: 2rem;
+.reg-thankyou {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.freebie {
   text-align: center;
+}
+
+.people {
+  margin-bottom: 2.4rem;
 }
