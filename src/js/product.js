@@ -2,11 +2,13 @@ import { setLocalStorage, getLocalStorage, getParam } from "./utils.mjs";
 import { renderProductDetails } from "./productDetails.mjs";
 import { findProductById } from "./productData.mjs";
 import { loadHeaderFooter } from "./utils.mjs";
+import getRecommendProducts from "./productListRecommended.mjs";
 
 loadHeaderFooter();
 
 const productId = getParam("product");
 const productCategory = getParam("category");
+getRecommendProducts(productCategory.productId);
 
 function addProductToCart(product) {
   let cart = getLocalStorage("so-cart");

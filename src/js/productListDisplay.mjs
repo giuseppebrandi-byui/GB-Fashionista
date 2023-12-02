@@ -3,7 +3,7 @@ import { renderListWithTemplate } from "./utils.mjs";
 
 let products;
 
-function productCardTemplate(product) {
+export function productCardTemplate(product) {
   return `<div class="product-card">
             <a
               href="/product_pages/index.html?category=${product.category}&&product=${product.id}"
