@@ -2,7 +2,7 @@ const form = document.querySelector(".reg-form");
 const wrapper = document.querySelector(".wrapper-register");
 const closeButton = document.querySelector(".ModalCloseBtn");
 const signupCloseBtn = document.querySelector(".registerCloseBtn");
-// const navCTA = document.querySelector(".nav-cta");
+const navCTA = document.querySelector(".nav-cta");
 
 wrapper.style.display = "none";
 
@@ -16,10 +16,8 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-window.addEventListener("load", function () {
-  setTimeout(function open() {
-    wrapper.style.display = "block";
-  }, 1000);
+navCTA.addEventListener("click", function () {
+  wrapper.style.display = "block";
 });
 
 signupCloseBtn.addEventListener("click", () => {

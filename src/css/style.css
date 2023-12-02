@@ -517,12 +517,15 @@ form input {
 }
 
 .close,
-.closeModalNewsletterBtn {
+.closeModalNewsletterBtn,
+.ModalCloseBtn,
+.registerCloseBtn {
   color: #aaa;
   text-align: right;
   font-size: 28px;
   font-weight: bold;
   display: block;
+  cursor: pointer;
 }
 
 .close:hover,
@@ -936,12 +939,6 @@ form label.top input:required:valid {
 .header-btn-wrapper {
   display: flex;
   justify-content: space-between;
-}
-
-.ModalCloseBtn,
-.registerCloseBtn {
-  font-size: 2rem;
-  margin-bottom: 2rem;
 }
 
 .free-pass {
