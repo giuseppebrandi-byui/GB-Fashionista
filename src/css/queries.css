@@ -17,7 +17,7 @@
   }
 
   .grid {
-    column-gap: 4.8rem;
+    column-gap: 6rem;
   }
 
   .header {
@@ -35,5 +35,62 @@
   .items-indicator {
     top: 3.2rem;
     right: 2.5rem;
+  }
+}
+
+/*************************************/
+/* BELOW 944px (Tablets)             */
+/*************************************/
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .hero-description {
+    margin-bottom: 3.2rem;
+  }
+}
+
+/*************************************/
+/* ABOVE 700px             */
+/*************************************/
+@media (min-width: 35em) {
+  .grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*************************************/
+/* ABOVE 944px             */
+/*************************************/
+@media (min-width: 50em) {
+  .grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 34.9em) {
+  .form-control {
+    width: 90%;
+  }
+
+  .signup-details h2,
+  .signup-details p {
+    text-align: center;
   }
 }
