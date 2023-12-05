@@ -1,0 +1,39 @@
+/**********************************/
+/* BELOW 1344px (Smaller Desktops)*/
+/**********************************/
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+}
+
+/*************************************/
+/* BELOW 1200px (Landscapes Tablets) */
+/*************************************/
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .items-indicator {
+    top: 3.2rem;
+    right: 2.5rem;
+  }
+}
