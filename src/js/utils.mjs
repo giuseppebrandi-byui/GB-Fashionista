@@ -100,6 +100,7 @@ export async function loadHeaderFooter() {
   const footerEl = document.querySelector(".footer");
   await renderWithTemplate(headerTemplateFn, headerEl);
   await renderWithTemplate(footerTemplateFn, footerEl);
+  // Add Toggle Menu
   const btnNavEl = document.querySelector(".btn-mobile-nav");
   btnNavEl.addEventListener("click", function () {
     headerEl.classList.toggle("nav-open");
