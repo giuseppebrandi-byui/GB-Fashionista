@@ -494,7 +494,9 @@ form input {
 /**********************/
 
 /* The Modal (background) */
-.modal {
+.modal,
+.modalR,
+#newsLetterModal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 30; /* Sit on top */
@@ -509,6 +511,7 @@ form input {
 
 /* Modal Content/Box */
 .modal-content,
+.modal-contentR,
 .modalContentReview,
 .modal-content-newsletter {
   background-color: #fefefe;
@@ -565,7 +568,8 @@ form input {
   display: none;
 }
 
-.product-list a {
+.product-list a,
+.newsletter-list a {
   text-decoration: none;
   color: var(--dark-grey);
 }
