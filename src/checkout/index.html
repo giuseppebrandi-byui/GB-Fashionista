@@ -31,12 +31,7 @@
     <main>
       <section class="products container-sm">
         <h1>Review & Place your Order</h1>
-        <form
-          method="get"
-          action="/checkout/index.html"
-          name="checkout"
-          class="form-checkout"
-        >
+        <form name="checkout" class="form-checkout">
           <fieldset>
             <legend><h2>Checkout</h2></legend>
             <label class="top"
@@ -75,7 +70,7 @@
                 type="text"
                 id="ccnum"
                 name="cardNumber"
-                placeholder="1111-2222-3333-4444"
+                placeholder="5499 7400 0000 0057"
                 required
             /></label>
             <label class="top"
@@ -116,7 +111,7 @@
             </div>
           </fieldset>
 
-          <input type="submit" value="Checkout" class="submitBtn" />
+          <button type="submit" class="submitBtn">Submit my order</button>
         </form>
       </section>
     </main>
