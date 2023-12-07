@@ -161,6 +161,7 @@ body {
   background: none;
   cursor: pointer;
   display: none;
+  z-index: 20;
 }
 
 .icon-mobile-nav {
@@ -496,7 +497,7 @@ form input {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 30; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -859,6 +860,7 @@ form label.top input:required:valid {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   overflow: hidden;
+  z-index: 30;
 }
 
 .wrapper-register.active .form-register.register {
