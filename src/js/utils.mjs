@@ -100,8 +100,6 @@ function displayModalRegister() {
   const signupCloseBtn = document.querySelector(".registerCloseBtn");
   const navCTA = document.querySelector(".nav-cta");
 
-  wrapper.style.display = "none";
-
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const fullname = document.querySelector("[name=fullname].value");
