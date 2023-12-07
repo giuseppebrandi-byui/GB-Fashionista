@@ -137,6 +137,6 @@ export async function loadHeaderFooter() {
   btnNavEl.addEventListener("click", function () {
     headerEl.classList.toggle("nav-open");
   });
-  displayModalRegister();
   displayCartIndicator();
+  displayModalRegister();
 }
