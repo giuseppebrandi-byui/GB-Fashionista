@@ -1,31 +1,14 @@
-import { getLocalStorage } from "./utils.mjs";
+import checkoutProcess from "./checkoutProcess.mjs";
 
-export function displayOrderSummary() {
-  let cart = getLocalStorage("so-cart");
-  // Set sales tax to 6%
-  const tax = 6;
-  // Set the sales tax amount to zero
-  let salesTax = 0;
-  // Set the cart subtotal to zero
-  let subtotalCart = 0;
-  // Set the cart total to zero
-  let totalCart = 0;
+checkoutProcess.init("so-cart", ".checkout-summary");
+let myForm = document.querySelector(".form-checkout");
+myForm.addEventListener("submit", handleCheckout);
 
-  if (cart != null) {
-    cart.forEach((item) => {
-      subtotalCart += item.price * item.productOnHold;
-      salesTax = (subtotalCart * tax) / 100;
-      totalCart = subtotalCart + salesTax;
-    });
+export function handleCheckout(e) {
+  e.preventDefault();
+  let myCheckOutForm = document.querySelector(".form-checkout");
+  let errors = checkoutProcess.checkout(myCheckOutForm);
+  if (errors) {
+    alert(Object.values(errors).toString().replace(/,/g, "\n"));
   }
-  // Display the subtotal to the cart subtotal section
-  document.querySelector("#cart-subtotal").innerHTML = `$${subtotalCart.toFixed(
-    2
-  )}`;
-  // Display the sales tax
-  document.querySelector("#sales-tax").innerHTML = `$${salesTax.toFixed(2)}`;
-  // Display the total to the cart total section
-  document.querySelector("#cart-total").innerHTML = `$${totalCart.toFixed(2)}`;
 }
-
-displayOrderSummary();
