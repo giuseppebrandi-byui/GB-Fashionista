@@ -432,7 +432,8 @@ footer {
   margin-bottom: 2.4rem;
 }
 
-#addToCart {
+#addToCart,
+.submitBtn {
   color: #fff;
   font-size: 2rem;
   font-weight: 600;
@@ -445,7 +446,8 @@ footer {
   margin-bottom: 9.6rem;
 }
 
-#addToCart:hover {
+#addToCart:hover,
+.submitBtn:hover {
   background-color: #db5656;
 }
 
