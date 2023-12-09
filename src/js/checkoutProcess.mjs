@@ -62,8 +62,12 @@ const checkoutProcess = {
     // once the totals are all calculated display them in the order summary page
     const salesTaxEl = document.querySelector("#sales-tax");
     const cartTotalEl = document.querySelector("#cart-total");
-    salesTaxEl.innerHTML = `$${this.tax}`;
-    cartTotalEl.innerHTML = `$${this.orderTotal}`;
+    if (salesTaxEl) {
+      salesTaxEl.innerHTML = `$${this.tax}`;
+    }
+    if (cartTotalEl) {
+      cartTotalEl.innerHTML = `$${this.orderTotal}`;
+    }
   },
 
   checkout: function (form) {
