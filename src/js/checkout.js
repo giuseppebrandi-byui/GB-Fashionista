@@ -2,7 +2,9 @@ import checkoutProcess from "./checkoutProcess.mjs";
 
 checkoutProcess.init("so-cart", ".checkout-summary");
 let myForm = document.querySelector(".form-checkout");
-myForm.addEventListener("submit", handleCheckout);
+if (myForm) {
+  myForm.addEventListener("submit", handleCheckout);
+}
 
 export function handleCheckout(e) {
   e.preventDefault();

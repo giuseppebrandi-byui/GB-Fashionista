@@ -100,27 +100,33 @@ function displayModalRegister() {
   const signupCloseBtn = document.querySelector(".registerCloseBtn");
   const navCTA = document.querySelector(".nav-cta");
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const fullname = document.querySelector("[name=fullname].value");
-    const email = document.querySelector("[name=email].value");
-    const password = document.querySelector("[name=password].value");
-    if (fullname !== "" && email !== "" && password !== "") {
-      wrapper.classList.remove("active");
-    }
-  });
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const fullname = document.querySelector("[name=fullname].value");
+      const email = document.querySelector("[name=email].value");
+      const password = document.querySelector("[name=password].value");
+      if (fullname !== "" && email !== "" && password !== "") {
+        wrapper.classList.remove("active");
+      }
+    });
+  }
 
   navCTA.addEventListener("click", function () {
     wrapper.style.display = "block";
   });
 
-  signupCloseBtn.addEventListener("click", () => {
-    wrapper.style.display = "none";
-  });
+  if (signupCloseBtn) {
+    signupCloseBtn.addEventListener("click", () => {
+      wrapper.style.display = "none";
+    });
+  }
 
-  closeButton.addEventListener("click", () => {
-    wrapper.style.display = "none";
-  });
+  if (closeButton) {
+    closeButton.addEventListener("click", () => {
+      wrapper.style.display = "none";
+    });
+  }
 }
 
 export async function loadHeaderFooter() {
