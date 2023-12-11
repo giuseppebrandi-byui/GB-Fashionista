@@ -6,7 +6,9 @@ let products;
 export function productCardTemplate(product) {
   return `<div class="product-card">
             <a
-              href="/product_pages/index.html?category=${product.category}&&product=${product.id}"
+              href="/product_pages/index.html?category=${
+                product.category
+              }&&product=${product.id}"
             >
               <img
                 class="product-img"
@@ -14,7 +16,7 @@ export function productCardTemplate(product) {
                 alt="${product.title}"
               />
               <h2 class="card__name">${product.title}</h2>
-              <p class="product-card__price">$${product.price}</p></a
+              <p class="product-card__price">$${product.price.toFixed(2)}</p></a
             >
           </div>`;
 }
