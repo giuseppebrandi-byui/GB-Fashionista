@@ -68,7 +68,7 @@ function cartItemTemplate(item) {
                 </a>
               </td>
               <td>$${item.price.toFixed(2)}</td>
-              <td><input type="number" class="cartQuantity" productid="${
+              <td><input type="number" min="1" max="10" class="cartQuantity" productid="${
                 item.id
               }" value=${item.productOnHold} /></td>
               <td>$${subtotal}</td>
