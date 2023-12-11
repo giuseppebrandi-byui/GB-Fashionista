@@ -234,6 +234,7 @@ body {
 .product-card a {
   text-decoration: none;
   margin-top: auto;
+  color: #333;
 }
 
 .product-card:hover {
