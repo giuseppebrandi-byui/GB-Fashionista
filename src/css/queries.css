@@ -1,7 +1,6 @@
 /**********************************/
 /* BELOW 1344px (Smaller Desktops)*/
 /**********************************/
-
 @media (max-width: 84em) {
   .hero {
     max-width: 120rem;
@@ -30,11 +29,6 @@
 
   .main-nav-list {
     gap: 3.2rem;
-  }
-
-  .items-indicator {
-    top: 3.2rem;
-    right: 2.5rem;
   }
 }
 

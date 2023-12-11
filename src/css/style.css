@@ -349,7 +349,7 @@ footer {
   width: 2.8rem;
 }
 
-.cart-icon {
+.cart {
   position: relative;
 }
 
@@ -427,10 +427,15 @@ footer {
   margin-bottom: 1.6rem;
 }
 
+#productName {
+  padding: 0 2rem;
+}
+
 .product__description {
   font-size: 1.8rem;
   line-height: 1.6;
   margin-bottom: 2.4rem;
+  padding: 0 2rem;
 }
 
 #addToCart,
@@ -560,8 +565,8 @@ form input {
   background-color: #f35f5f;
   border-radius: 50%;
   position: absolute;
-  top: 3rem;
-  right: 4.2rem;
+  top: 0;
+  right: -0.5rem;
   color: #fff;
   text-align: center;
   line-height: 1.5;
