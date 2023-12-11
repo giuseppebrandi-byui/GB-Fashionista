@@ -3,8 +3,10 @@ import { renderProductDetails } from "./productDetails.mjs";
 import { findProductById } from "./productData.mjs";
 import { loadHeaderFooter } from "./utils.mjs";
 import getRecommendProducts from "./productListRecommended.mjs";
+import { displayElementsBySearchTerm } from "./productListDisplay.mjs";
 
 loadHeaderFooter();
+displayElementsBySearchTerm();
 
 const productId = getParam("product");
 const productCategory = getParam("category");
